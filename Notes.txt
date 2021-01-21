@@ -1,0 +1,24 @@
+STEPS:
+  1- create first state and fill it with the initial data after calling assignTerritories function
+  2- fill the state obj by looping over the territories and getting each territory's ownerNumber and armyCount
+  3- for the stateString in State => append all the ownerNumbers from the territories
+  4- for the armiesList in State => add all armiesCount from the territories
+  5- When changing from one state to another
+    => create new state
+    => new stateString = oldState.stateString & change the owner of whatever territory attacked
+    => new armiesList = oldState.armiesList.clone() & change whatever armies changed
+
+State: Class 
+    => String containing the current assignment of all territories in order. ex=> 01100100100100110110...
+    => ArrayList<Integer> Armies [-1,10,2,3,5,10,20]
+    => Parent State
+
+States from each State
+  forEach place i have => add the bonus
+    forEach Enimy i have
+      forEach number of armies i can attack with
+        try to attack
+
+G: Calculate how many territory i own and will be defeated
+
+H: Number of enimies territories
